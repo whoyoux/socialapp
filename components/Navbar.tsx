@@ -5,7 +5,7 @@ import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline';
 import { auth } from '../lib/firebase';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import Link from 'next/link';
-//import Image from 'next/Image';
+import Image from 'next/Image';
 
 const navigation = [
     { name: 'Dashboard', href: '/', current: true },
@@ -49,24 +49,24 @@ export default function Navbar() {
                                 <div className="flex-shrink-0 flex items-center">
                                     <Link href="/">
                                         <div className="block lg:hidden h-8 w-auto cursor-pointer">
-                                            <img
+                                            <Image
                                                 className=""
                                                 src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
                                                 alt="Workflow"
-                                                // width={32}
-                                                // height={32}
+                                                width={32}
+                                                height={32}
                                             />
                                         </div>
                                     </Link>
 
                                     <Link href="/">
                                         <div className="hidden lg:block h-8 w-auto cursor-pointer">
-                                            <img
+                                            <Image
                                                 className=""
                                                 src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg"
                                                 alt="Workflow"
-                                                // width={143}
-                                                // height={32}
+                                                width={143}
+                                                height={32}
                                             />
                                         </div>
                                     </Link>
@@ -119,12 +119,12 @@ export default function Navbar() {
                                                     <span className="sr-only">
                                                         Open user menu
                                                     </span>
-                                                    <img
+                                                    <Image
                                                         className="h-8 w-8 rounded-full"
                                                         src={user?.photoURL!}
                                                         alt=""
-                                                        // width={32}
-                                                        // height={32}
+                                                        width={32}
+                                                        height={32}
                                                     />
                                                 </Menu.Button>
                                             </div>
