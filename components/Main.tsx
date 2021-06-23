@@ -3,7 +3,7 @@ import { auth } from '../lib/firebase';
 import { useAuthState } from 'react-firebase-hooks/auth';
 
 import Navbar from '../components/Navbar';
-import Image from 'next/Image';
+import Image from 'next/image';
 
 export default function Login() {
     const [user] = useAuthState(auth);

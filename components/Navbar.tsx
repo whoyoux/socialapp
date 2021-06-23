@@ -5,7 +5,7 @@ import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline';
 import { auth } from '../lib/firebase';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import Link from 'next/link';
-import Image from 'next/Image';
+import Image from 'next/image';
 
 const navigation = [
     { name: 'Dashboard', href: '/', current: true },
