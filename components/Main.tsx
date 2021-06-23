@@ -3,7 +3,7 @@ import { auth } from '../lib/firebase';
 import { useAuthState } from 'react-firebase-hooks/auth';
 
 import Navbar from '../components/Navbar';
-import Image from 'next/Image';
+//import Image from 'next/Image';
 
 export default function Login() {
     const [user] = useAuthState(auth);
@@ -17,11 +17,11 @@ export default function Login() {
             <main className="text-center">
                 <h1 className="text-5xl">Social app</h1>
                 <div className="w-1/4 mx-auto flex flex-row items-center justify-evenly">
-                    <Image
+                    <img
                         src={user?.photoURL!}
                         alt="photo url"
-                        width={100}
-                        height={100}
+                        // width={100}
+                        // height={100}
                     />
                     <div className="justify-center">
                         <p>{user?.displayName}</p>
