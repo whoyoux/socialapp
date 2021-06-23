@@ -9,7 +9,7 @@ import { auth } from '../lib/firebase';
 import { useAuthState } from 'react-firebase-hooks/auth';
 
 function App({ Component, pageProps }: AppProps) {
-    const [user] = useAuthState(auth);
+    const [user, loading] = useAuthState(auth);
     return (
         <>
             <Head>
@@ -17,7 +17,13 @@ function App({ Component, pageProps }: AppProps) {
                 <meta name="description" content="Social app" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            {!user ? <Login /> : <Component {...pageProps} />}
+            {loading ? (
+                <p className="text-5xl text-center mt-10">Loading</p>
+            ) : !user ? (
+                <Login />
+            ) : (
+                <Component {...pageProps} />
+            )}
         </>
     );
 }
