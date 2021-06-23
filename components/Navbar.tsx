@@ -125,6 +125,7 @@ export default function Navbar() {
                                                         alt=""
                                                         width={32}
                                                         height={32}
+                                                        quality={100}
                                                     />
                                                 </Menu.Button>
                                             </div>
@@ -140,7 +141,7 @@ export default function Navbar() {
                                             >
                                                 <Menu.Items
                                                     static
-                                                    className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+                                                    className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-10"
                                                 >
                                                     <Menu.Item>
                                                         {({ active }) => (
